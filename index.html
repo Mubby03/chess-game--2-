@@ -24,6 +24,7 @@
 <!-- Favicon -->
 <link rel="icon" type="image/png" sizes="32x32" href="https://em-content.zobj.net/thumbs/240/apple/354/chess-pawn_265f.png">
 <link rel="icon" type="image/png" sizes="16x16" href="https://em-content.zobj.net/thumbs/240/apple/354/chess-pawn_265f.png">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap" rel="stylesheet">
 
     
     <!-- Manifest -->
@@ -35,7 +36,8 @@
 <body>
     <div class="game-container">
         <div class="app-header">
-            <h1>Chess</h1>
+            <h1 class="chess-heading">♚ Chess</h1>
+
             <div class="install-prompt" id="install-prompt" style="display: none;">
                 <button id="install-button" class="install-btn">
                     📱 Install Application.
@@ -48,15 +50,17 @@
                 Current Player: <span id="current-player">White</span>
             </div>
             <div class="game-status" id="game-status"></div>
-            <button id="reset-btn" class="reset-button">New Game</button>
+            <button id="reset-btn" class="newgame-button">♟ New Game</button>
+
         </div>
         
         <div class="game-layout">
             <div class="timer-section">
-                <div class="timer" id="black-timer" data-player="black">
-                    <div class="timer-label">Black</div>
+                <div class="timer chess-timer" id="black-timer" data-player="black">
+                    <div class="timer-label">♟ Black</div>
                     <div class="timer-display" id="black-time">10:00</div>
-                </div>
+                  </div>
+                  
                 <div class="timer-controls">
                     <button id="start-timer-btn" class="timer-button">Start Game</button>
                     <button id="pause-timer-btn" class="timer-button">⏸ Pause</button>

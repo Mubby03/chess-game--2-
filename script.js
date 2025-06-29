@@ -452,7 +452,7 @@ class ChessGame {
       this.stopTimer()
       if (inCheck) {
         document.getElementById("game-status").textContent =
-          `Checkmate! ${this.currentPlayer === "white" ? "Black" : "White"} wins!`
+          `Checkmate! ${this.currentPlayer === "♕white" ? "♕Black" : "White"} wins!`
       } else {
         document.getElementById("game-status").textContent = "Stalemate! It's a draw!"
       }
