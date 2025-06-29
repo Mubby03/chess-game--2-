@@ -83,10 +83,16 @@ if (triggerBtn && modal && confirmBtn && cancelBtn) {
   });
 
   confirmBtn.addEventListener("click", () => {
+    // Trigger the reset immediately
+    triggerBtn.click();
   
-    triggerBtn.click(); // re-trigger original reset logic
-    modal.style.display = "none";
+    // Then after a short delay, close the modal and start the game
+    setTimeout(() => {
+      modal.style.display = "none";
+      document.getElementById("start-timer-btn").click();
+    }, 300); // 300ms delay
   });
+  
 }
 
 // ========== PAUSE OVERLAY ==========
@@ -159,4 +165,6 @@ if (pauseBtn) {
 
   document.addEventListener('keydown', resumeFromPause);
   pauseOverlay.addEventListener('click', resumeFromPause);
+  pauseOverlay.addEventListener('click', resumeFromPause);
+  
 }
