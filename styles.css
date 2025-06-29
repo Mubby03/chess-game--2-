@@ -13,6 +13,7 @@ body {
   align-items: center;
   padding: 20px;
   perspective: 1000px;
+  
 }
 
 .game-container {
@@ -58,7 +59,7 @@ h1 {
   border: none;
   padding: 12px 20px;
   border-radius: 25px;
-  cursor: pointer;
+  cursor:  url('assets/cursor.png'), auto;;
   font-size: 1em;
   font-weight: bold;
   transition: all 0.3s ease;
@@ -199,7 +200,8 @@ h1 {
   font-weight: 600;
   letter-spacing: 1px;
   border-radius: 8px;
-  cursor: pointer;
+
+  cursor:  url('assets/cursor3.png'), auto;;
   transition: all 0.25s ease;
   text-transform: uppercase;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -230,7 +232,8 @@ h1 {
   font-weight: 600;
   letter-spacing: 0.5px;
   border-radius: 8px;
-  cursor: pointer;
+
+  cursor:  url('assets/cursor3.png'), auto;;
   transition: all 0.25s ease;
   text-transform: uppercase;
   text-shadow: 1px 1px 2px #000;
@@ -300,7 +303,7 @@ h1 {
   justify-content: center;
   align-items: center;
   font-size: 42px;
-  cursor: pointer;
+  cursor:  url('assets/cursor3.png'), auto;;
   transition: all 0.3s ease;
   position: relative;
   transform-style: preserve-3d;
@@ -505,6 +508,8 @@ border-radius: 5px;
   backdrop-filter: blur(10px);
   animation: pulse 2s infinite;
 }
+
+
 
 @keyframes pulse {
   0%,

@@ -519,7 +519,7 @@ class ChessGame {
   startGame() {
     this.gameStarted = true
     this.startTimer("white")
-    document.getElementById("start-timer-btn").textContent = "Game Started"
+    document.getElementById("start-timer-btn").textContent = "Game Has Started"
     document.getElementById("start-timer-btn").disabled = true
   }
 
