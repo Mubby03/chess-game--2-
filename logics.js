@@ -83,14 +83,14 @@ if (triggerBtn && modal && confirmBtn && cancelBtn) {
   });
 
   confirmBtn.addEventListener("click", () => {
-    // Trigger the reset immediately
+  
     triggerBtn.click();
   
-    // Then after a short delay, close the modal and start the game
+  
     setTimeout(() => {
       modal.style.display = "none";
       document.getElementById("start-timer-btn").click();
-    }, 300); // 300ms delay
+    }, 30); // 300ms delay
   });
   
 }
