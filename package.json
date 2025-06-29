@@ -1,8 +1,4 @@
 {
   "name": "my-v0-project",
-  "version": "0.1.0",
-  "private": false,
-  "scripts": {
-    "build": "echo 'no build script'"
-  }
+  "version": "0.1.0"
 }
