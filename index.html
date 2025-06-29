@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Professional Chess Game</title>
     <meta name="description" content="A fully functional 3D chess game with professional timer and all chess rules">
@@ -29,6 +30,7 @@
     
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <div class="game-container">
         <div class="app-header">
@@ -67,7 +69,7 @@
             <div class="timer-section">
                 <div class="timer active" id="white-timer" data-player="white">
                     <div class="timer-label">White</div>
-                    <div class="timer-display" id="white-time">10:01</div>
+                    <div class="timer-display" id="white-time">10:00</div>
                 </div>
                 <div class="timer-controls">
                     <button id="reset-timer-btn" class="timer-button">Reset Timer</button>
@@ -100,5 +102,14 @@
     </div>
     
     <script src="script.js"></script>
-</body>
-</html>
+   
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/service-worker.js')
+          .then(() => console.log('✅ Service Worker registered'))
+          .catch(err => console.error('❌ SW registration failed:', err));
+      }
+    </script>
+    </body>
+    </html>
+    
