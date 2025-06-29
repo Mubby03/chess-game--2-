@@ -86,7 +86,6 @@ h1 {
 }
 
 
-
 .chess-heading {
   font-family: 'Cinzel', serif;
   font-size: 2.5rem;
@@ -95,6 +94,15 @@ h1 {
   letter-spacing: 2px;
   text-shadow: 1px 1px 1px #000;
   text-transform: uppercase;
+}
+
+.chess-heading .byline {
+  font-size: 1rem;
+  font-style: italic;
+  color: #d4c49e;
+  margin-left: 10px;
+  letter-spacing: 0.5px;
+  text-transform: none;
 }
 
 .timer {
