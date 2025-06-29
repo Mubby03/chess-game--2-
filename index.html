@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Chess Game</title>
+    <meta name="description" content="A fully functional 3D chess game with professional timer and all chess rules">
+    <meta name="keywords" content="chess, game, 3D, timer, professional, desktop, app">
+    <meta name="author" content="Chess Game Pro">
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#667eea">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Chess Game">
+    <meta name="msapplication-TileColor" content="#667eea">
+    <meta name="msapplication-TileImage" content="/icons/icon-144x144.png">
+    
+    <!-- Apple Touch Icons -->
+    <link rel="apple-touch-icon" sizes="152x152" href="/icons/icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/icon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/icon-16x16.png">
+    
+    <!-- Manifest -->
+    <link rel="manifest" href="/manifest.json">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="app-header">
+            <h1>Professional Chess Game</h1>
+            <div class="install-prompt" id="install-prompt" style="display: none;">
+                <button id="install-button" class="install-btn">
+                    📱 Install App
+                </button>
+            </div>
+        </div>
+        
+        <div class="game-info">
+            <div class="current-player">
+                Current Player: <span id="current-player">White</span>
+            </div>
+            <div class="game-status" id="game-status"></div>
+            <button id="reset-btn" class="reset-button">New Game</button>
+        </div>
+        
+        <div class="game-layout">
+            <div class="timer-section">
+                <div class="timer" id="black-timer" data-player="black">
+                    <div class="timer-label">Black</div>
+                    <div class="timer-display" id="black-time">10:00</div>
+                </div>
+                <div class="timer-controls">
+                    <button id="start-timer-btn" class="timer-button">Start Game</button>
+                    <button id="pause-timer-btn" class="timer-button">Pause</button>
+                </div>
+            </div>
+            
+            <div class="board-container">
+                <div class="chess-board white-turn" id="chess-board"></div>
+            </div>
+            
+            <div class="timer-section">
+                <div class="timer active" id="white-timer" data-player="white">
+                    <div class="timer-label">White</div>
+                    <div class="timer-display" id="white-time">10:00</div>
+                </div>
+                <div class="timer-controls">
+                    <button id="reset-timer-btn" class="timer-button">Reset Timer</button>
+                    <select id="time-preset" class="timer-button">
+                        <option value="600">10 min</option>
+                        <option value="300">5 min</option>
+                        <option value="180">3 min</option>
+                        <option value="60">1 min</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        
+        <div class="turn-indicator" id="turn-indicator"></div>
+        <div class="captured-pieces">
+            <div class="captured-white">
+                <h3>Captured White Pieces</h3>
+                <div id="captured-white"></div>
+            </div>
+            <div class="captured-black">
+                <h3>Captured Black Pieces</h3>
+                <div id="captured-black"></div>
+            </div>
+        </div>
+        
+        <!-- Offline indicator -->
+        <div class="offline-indicator" id="offline-indicator" style="display: none;">
+            <span>📶 Playing Offline</span>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
