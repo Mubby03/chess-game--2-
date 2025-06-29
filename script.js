@@ -548,7 +548,7 @@ class ChessGame {
 
   pauseTimer() {
     this.timerPaused = !this.timerPaused
-    document.getElementById("pause-timer-btn").textContent = this.timerPaused ? "Resume" : "Pause"
+    document.getElementById("pause-timer-btn").textContent = this.timerPaused ? "▶" : "⏸"
   }
 
   resetTimer() {
@@ -560,7 +560,7 @@ class ChessGame {
     this.gameStarted = false
     document.getElementById("start-timer-btn").textContent = "Start Game"
     document.getElementById("start-timer-btn").disabled = false
-    document.getElementById("pause-timer-btn").textContent = "Pause"
+    document.getElementById("pause-timer-btn").textContent = "▐▐"
     this.timerPaused = false
   }
 

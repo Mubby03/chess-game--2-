@@ -17,13 +17,14 @@
     <meta name="msapplication-TileColor" content="#667eea">
     <meta name="msapplication-TileImage" content="/icons/icon-144x144.png">
     
-    <!-- Apple Touch Icons -->
-    <link rel="apple-touch-icon" sizes="152x152" href="/icons/icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="/icons/icon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/icons/icon-16x16.png">
+   <!-- Apple Touch Icons -->
+<link rel="apple-touch-icon" sizes="152x152" href="https://em-content.zobj.net/thumbs/240/apple/354/chess-pawn_265f.png">
+<link rel="apple-touch-icon" sizes="192x192" href="https://em-content.zobj.net/thumbs/240/apple/354/chess-pawn_265f.png">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" sizes="32x32" href="https://em-content.zobj.net/thumbs/240/apple/354/chess-pawn_265f.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://em-content.zobj.net/thumbs/240/apple/354/chess-pawn_265f.png">
+
     
     <!-- Manifest -->
     <link rel="manifest" href="/manifest.json">
@@ -34,7 +35,7 @@
 <body>
     <div class="game-container">
         <div class="app-header">
-            <h1>Chess Game</h1>
+            <h1>Chess</h1>
             <div class="install-prompt" id="install-prompt" style="display: none;">
                 <button id="install-button" class="install-btn">
                     📱 Install App
@@ -58,7 +59,9 @@
                 </div>
                 <div class="timer-controls">
                     <button id="start-timer-btn" class="timer-button">Start Game</button>
-                    <button id="pause-timer-btn" class="timer-button">Pause</button>
+                    <button id="pause-timer-btn" class="timer-button">⏸ Pause</button>
+
+
                 </div>
             </div>
             
@@ -97,7 +100,7 @@
         
         <!-- Offline indicator -->
         <div class="offline-indicator" id="offline-indicator" style="display: none;">
-            <span>📶 Playing Offline</span>
+            <span> Playing Offline</span>
         </div>
     </div>
     
@@ -105,11 +108,12 @@
    
     <script>
       if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/service-worker.js')
-          .then(() => console.log('✅ Service Worker registered'))
-          .catch(err => console.error('❌ SW registration failed:', err));
+        navigator.serviceWorker.register('/sw.js')
+          .then(() => console.log('Service Worker registered'))
+          .catch(err => console.error('SW registration failed:', err));
       }
     </script>
+   
     </body>
     </html>
     
