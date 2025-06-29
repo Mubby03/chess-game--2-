@@ -6,7 +6,7 @@
 
 body {
   font-family: "Arial", sans-serif;
-  background: linear-gradient(135deg, #acc98a 0%, #9a5a11 50%, #d3a849 100%);
+  background: linear-gradient(135deg, #acc98a 0%, #9a5a11 50%, #372a0d 100%);
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -97,26 +97,20 @@ h1 {
 }
 
 .timer {
-  background-color: #2e2e2e;               /* dark chessboard tone */
-  color: #f0d9b5;                          /* ivory text like light squares */
+  background-color: #2e2e2e;  
+  color: #f0d9b5;          
   padding: 20px;
   border-radius: 12px;
   text-align: center;
-  cursor: pointer;
+  
   transition: all 0.3s ease;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
-  border: 2px solid #b58863;              /* wood edge */
+  border: 2px solid #b58863;       
   min-width: 160px;
   font-family: 'Cinzel', serif;
   font-weight: 600;
   letter-spacing: 0.5px;
   text-shadow: 1px 1px 2px #000;
-}
-
-
-.timer:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
 }
 
 .timer.active {
@@ -524,106 +518,69 @@ border-radius: 5px;
 
 @media (max-width: 1000px) {
   .game-layout {
-    display: grid;
     grid-template-columns: 1fr;
-    gap: 24px;
-    justify-items: center;
+    gap: 20px;
   }
 
   .timer-section {
-    display: flex;
     flex-direction: row;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 12px;
   }
 
   .app-header {
     text-align: center;
-    margin-bottom: 10px;
   }
 
   h1 {
-    font-size: 2rem;
-  }
-
-  .captured-pieces {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
-
-  .captured-white,
-  .captured-black {
-    width: 90%;
-  }
-
-  .current-player {
-    margin: 0 auto;
+    font-size: 2em;
   }
 }
 
 @media (max-width: 600px) {
   .game-container {
-    padding: 12px;
+    padding: 15px;
   }
 
   .chess-board {
-    width: 100%;
-    max-width: 300px;
-    height: 100%;
-    max-height: 300px;
+    width: 320px;
+    height: 320px;
   }
 
   .square {
-    width: 37.5px;
-    height: 37.5px;
-    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    font-size: 28px;
   }
 
   .game-info {
     flex-direction: column;
-    align-items: center;
     text-align: center;
-    gap: 10px;
   }
 
   .captured-pieces {
     flex-direction: column;
-    align-items: center;
     gap: 15px;
   }
 
   .current-player {
-    font-size: 1rem;
-    padding: 8px 15px;
+    font-size: 1.1em;
   }
 
   .timer {
-    min-width: 110px;
-    padding: 12px;
+    min-width: 120px;
+    padding: 15px;
   }
 
   .timer-display {
-    font-size: 1.5em;
-  }
-
-  .timer-button {
-    font-size: 0.9em;
-    padding: 8px 14px;
-  }
-
-  .newgame-button {
-    padding: 10px 20px;
-    font-size: 0.95em;
+    font-size: 1.8em;
   }
 
   h1 {
-    font-size: 1.5rem;
+    font-size: 1.8em;
   }
 }
 
-/* PWA full-screen display fix */
+/* PWA specific styles */
 @media (display-mode: standalone) {
   body {
     padding-top: 0;
