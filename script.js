@@ -549,6 +549,7 @@ class ChessGame {
   pauseTimer() {
     this.timerPaused = !this.timerPaused
     document.getElementById("pause-timer-btn").textContent = this.timerPaused ? "▶" : "⏸"
+   
   }
 
   resetTimer() {
