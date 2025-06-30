@@ -86,13 +86,11 @@ if (triggerBtn && modal && confirmBtn && cancelBtn) {
   
     triggerBtn.click();
   
-  
     setTimeout(() => {
       modal.style.display = "none";
       document.getElementById("start-timer-btn").click();
-    }, 30); // 300ms delay
+    }, 30);
   });
-  
 }
 
 // ========== PAUSE OVERLAY ==========

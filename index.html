@@ -65,9 +65,11 @@
                 <div class="timer-controls">
                     <button id="start-timer-btn" class="timer-button">Start Game</button>
                     <button id="pause-timer-btn" class="timer-button">⏸ Pause</button>
-
-
-                </div>
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="myToggle">
+                        <span class="slider"></span>
+                    </label>
+                 </div>
             </div>
             
             <div class="board-container">
@@ -107,12 +109,9 @@
         <div class="offline-indicator" id="offline-indicator" style="display: none;">
             <span> Playing Offline</span>
         </div>
+          
     </div>
-    
-
-
-    
-    
+        
     <script src="script.js"></script>
     <script src="logics.js"></script>
    
